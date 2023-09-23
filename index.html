@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Weather App</title>
+    <meta name="title" content="weather">
+    <meta name="description" content="a weather app made by william robersone">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script type="module" src="./assets/js/app.js"></script>
+    <script type="module" src="./assets/js/route.js"></script>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <a href="" class="logo">
+                <img src="./assets/images/logo.png" alt="">
+            </a>
+            <div class="search-view" data-search-view>
+                <div class="search-wrapper">
+                    <input type="search" name="search" placeholder="Search City..." class="search-field searching" autocomplete="off" data-search-field>
+                    <span class="m-icon">Search</span>
+
+                    <button class="icon-btn leading-icon has-state" aria-label="close search" data-search-toggler>
+                        <span class="m-icon">arrow_back</span>
+                    </button>
+                </div>
+
+                <div class="search-result" data-search-result>
+                    <ul class="view-list" data-search-list>
+                        <li class="view-item">
+                            <span class="m-icon">location_on</span>
+                            <div>
+                                <p class="item-title">Los Angeles</p>
+                                <p class="label-2 item-subtitle">City of California</p>
+                            </div>
+
+                            <a href="" class="item-link has-state" data-search-toggler></a>
+
+                        </li>
+                    </ul>                    
+                </div>
+                
+            </div>
+
+            <div class="header-actions">
+                <button class="icon-btn has-state" aria-label="open search" data-search-toggler>
+                    <span class="m-icon icon">search</span>
+                </button>
+
+                <a href="#/current-location" class="btn-primary has-state" data-current-location-btn>
+                    <span class="m-icon">my_location</span>
+
+                    <span class="span">Current Location</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <article class="container">
+            <div class="left-content">
+                <section class="section current-weather" aria-label="current weather" data-current-weather>
+                    <div class="card lg-card current-weather-card">
+                        <h2 class="title-2 card-title">Now</h2>
+                        <div class="wrapper">
+                            <p class="heading">75&deg;<sup>c</sup></p>
+
+                            <img src="./assets/images/weather_icons/01d.png" alt="" class="weather-icon">
+                        </div>
+                        <p class="body-3">Overcast Sunny</p>
+                        <ul class="meta-list">
+                            <li class="meta-item">
+                                <span class="m-icon">calendar_today</span>
+                                <p class="title-3 meta-text">Thursday, February 16</p>
+                            </li>
+                            <li class="meta-item">
+                                <span class="m-icon">location_on</span>
+                                <p class="title-3 meta-text">Los Angeles, USA</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="section forecast" aria-labelledby="forecast" data-5-day-forecast>
+                    <h2 class="title-2" id="forecast-label">5 Day Forecast</h2>
+                    <div class="card lg-card forecast-card">
+                        <ul>
+                            <li class="card-item">
+                                <div class="icon-wrapper">
+                                    <img src="./assets/images/weather_icons/01n.png" alt="" class="forecast-icon">
+                                    <span class="span">
+                                        <p class="title-2"></p>
+                                    </span>
+                                </div>
+                                <p class="label-1">Saturday</p>
+                                <p class="label-1">Feb 17</p>
+                            </li>
+                            <li class="card-item">
+                                <div class="icon-wrapper">
+                                    <img src="./assets/images/weather_icons/01n.png" alt="" class="forecast-icon">
+                                    <span class="span">
+                                        <p class="title-2"></p>
+                                    </span>
+                                </div>
+                                <p class="label-1">Sunday</p>
+                                <p class="label-1">Feb 18</p>
+                            </li>
+                            <li class="card-item">
+                                <div class="icon-wrapper">
+                                    <img src="./assets/images/weather_icons/01n.png" alt="" class="forecast-icon">
+                                    <span class="span">
+                                        <p class="title-2"></p>
+                                    </span>
+                                </div>
+                                <p class="label-1">Monday</p>
+                                <p class="label-1">Feb 19</p>
+                            </li>
+                            <li class="card-item">
+                                <div class="icon-wrapper">
+                                    <img src="./assets/images/weather_icons/01n.png" alt="" class="forecast-icon">
+                                    <span class="span">
+                                        <p class="title-2"></p>
+                                    </span>
+                                </div>
+                                <p class="label-1">Tuesday</p>
+                                <p class="label-1">Feb 20</p>
+                            </li>
+                            <li class="card-item">
+                                <div class="icon-wrapper">
+                                    <img src="./assets/images/weather_icons/01n.png" alt="" class="forecast-icon">
+                                    <span class="span">
+                                        <p class="title-2"></p>
+                                    </span>
+                                </div>
+                                <p class="label-1">Wednesday</p>
+                                <p class="label-1">Feb 21</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+
+            </div>
+
+            <div class="right-content">
+                <section class="section highlights" aria-label="highlights-label" data-highlights>
+                    <div class="card lg-card">
+                        <h2 class="title-2" id="highlights-label">Today&apos;s Highlights</h2>
+                        <div class="highlight-list">
+                            <div class="card sm-card highlight-card one">
+                                <h3 class="title-3">Air Quality</h3>
+                                <div class="wrapper">
+                                    <span class="m-icon">air</span>
+                                    <ul class="card-list">
+                                        <li class="card-item">
+                                            <p class="title-1">23.3</p>
+                                            <p class="label-1">PM <sub>2.5</sub></p>
+                                        </li>
+                                        <li class="card-item">
+                                            <p class="title-1">23.3</p>
+                                            <p class="label-1">PM <sub>2.5</sub></p>
+                                        </li>
+                                        <li class="card-item">
+                                            <p class="title-1">23.3</p>
+                                            <p class="label-1">PM <sub>2.5</sub></p>
+                                        </li>
+                                        <li class="card-item">
+                                            <p class="title-1">23.3</p>
+                                            <p class="label-1">PM <sub>2.5</sub></p>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <span class="badge air-1 label-1" title="air message">Good</span>
+                            </div>
+
+                            <div class="card sm-card highlight-card two">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
